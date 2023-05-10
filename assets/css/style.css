@@ -1,0 +1,474 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Faz os itens ficarem no centro */
+header {
+    display: flex;
+    justify-content: center;
+    height: 120px;
+}
+
+/* onde definimos os elementos da div */
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 990px;
+}
+
+/* logo centralizada */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* menu de navegação com display flex faz os itens ficarem um ao lado do outro */
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+/* menu de navegação */
+nav ul,
+nav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul {
+    display: flex; 
+}
+nav a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #727272;
+}
+
+/* faz os itens mudarem de cor ao passar o mouse */
+nav .active a,
+nav a:hover {
+    background-color: #42b3e5;
+    color: #ffff;
+}
+
+/* Background da imagem do site */
+#banner {
+    display: flex;
+    justify-content: center;
+    background-image: url('../images/img1.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 670px;
+}
+
+/* segunda parte do container mas definida com a classe .container column */
+.column {
+    flex-direction: column;
+}
+.banner_headline {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.banner_options {
+    height: 210px;
+}
+.banner_headline h1 {
+    color: #ffff;
+    font-size: 70px;
+    text-shadow: 1px 0px 0px #000;
+    margin: 0;
+    padding: 0;
+    max-width: 350px;
+}
+.banner_headline h2 {
+    color: #ffff;
+    font-size: 21px;
+    text-shadow: 1px 0px 0px #000;
+    margin: 0;
+    padding: 0;
+    max-width: 350px;
+    margin-top: 30px;
+}
+.banner_options {
+    height: 210px;
+    display: flex;
+}
+
+/* parte do meio do banner */
+.banner1,
+.banner2,
+.banner3 {
+    flex: 1;
+    color: #ffff;
+    padding: 20px;
+}
+.banner1 {
+    background-color: #39aae1;
+}
+.banner2 {
+    background-color: #0079c7;
+}
+.banner3 {
+    background-color: #2b4c99;
+}
+.banner_tittle {
+    font-size: 20px;
+}
+.bannerDesc {
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.banner_options a {
+    display: inline-block;
+    border: 1px solid #ffff;
+    padding: 5px;
+    font-size: 13px;
+    color: #ffff;
+    text-decoration: none;
+}
+.banner_options a:hover {
+    background-color: #42b3e5;
+}
+
+/* exercicio parte do banner */
+.banner_Desc {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom:1px solid rgba(228, 217, 217, 0.3);
+}
+
+/* aqui é mencionado o css na parte descrição span */
+.banner_Desc span {
+    font-size: 12px;
+}
+
+/* segunda parte do site 'section'  */
+#geral {
+    display: flex;
+    justify-content: center;
+}
+#geral section {
+    flex: 2;
+}
+#geral aside {
+    flex: 1;
+}
+.widget_titulo {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.widget_texto {
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+}
+.widget_barra {
+    width: 50px;
+    height: 3px;
+    background-color: #0079c7;
+    margin-top: 10px;
+}
+
+/* exercicio parte lateral direita */
+.widget_body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.widget_bloco {
+    width: 150px;
+    height: 150px;
+    background-color: #39aae1;
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.widget_body p {
+    font-size: 13px;
+    color: #5c5c5c;
+}
+.widget_bloco a {
+    text-decoration: none;
+}
+.widget_bloco a:hover {
+    background-color: #2b4c99;
+}
+
+/* Aqui foi definido a borda top acima */
+.contato_telefone { 
+    border-top: 1px solid #cecacae0;
+    margin-top: 15px;
+}
+/* campo de contato redes sociais */
+.img_telefone,
+.img_email,
+.img_page {
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+}
+.img_barrinha,
+.img_email_barrinha,
+.img_page_barrinha {
+    margin-top: 20px;
+    border-bottom: 1px solid #cecacae0;
+}
+.contato_telefone span,
+.contato_email span,
+.contato_pagina span {
+    font-size: 15px;
+    margin-left: 5px;
+}
+.contato_pagina a {
+    text-decoration: none;
+}
+
+/* conteudo de noticias */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+article {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+}
+article a {
+    text-decoration: none;
+}
+article .newsdata {
+    display: flex;
+}
+article .newspost {
+    background-color: #2b4c99;
+    color: #ffff;
+    font-size: 12px;
+    padding: 10px;
+}
+article .newscomentarios {
+    background-color: #39aae1;
+    color: #ffff;
+    font-size: 12px;
+    margin-left: 3px;
+    padding: 10px;
+}
+article .thumbnail {
+    margin-top: 30px;
+}
+article .thumbnail img {
+    width: 100%;
+    height: auto;
+}
+article .newstitulo {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 23px;
+    color: #000;
+}
+article .newsresumo {
+    font-size: 14px;
+    color: #5c5c5c;
+    line-height: 20px; /* espaçamento entre as palavras */
+    margin-bottom: 30px;
+}
+
+/* rodapé */
+footer {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    color: #ffff;
+}
+.footermenu {
+    display: flex;
+    flex: 1;
+}
+.fm1, .fm2, .fm3 {
+    flex: 1;
+    color: #ffff;
+    padding: 20px;
+    font-size: 20px;
+}
+.fm1 {
+    background-color: #39aae1;
+}
+.fm2 {
+    background-color: #0079c7;
+}
+.fm3 {
+    background-color: #2b4c99;
+}
+.footermenu span {
+    color: #ffff;
+    font-size: 13px;
+}
+
+/* exercicio footer */
+.footermenu a {
+    text-decoration: none;
+}
+.fm1 span {
+    display: flex;
+    margin-top: 15px;
+}
+.fm2 span {
+    display: flex;
+    margin-top: 15px;
+}
+.fm3 span {
+    display: flex;
+    margin-top: 15px;
+}
+.footerarea {
+    display: flex;
+}
+.flexcolumn {
+    flex-direction: column;
+}
+.areaitem {
+    flex: 1;
+    color: #ffff;
+}
+footer .widget_texto {
+    color: #ffff;
+}
+.widget_body span {
+    font-size: 13px;
+    color: #5c5c5c;
+}
+.footer_endereco {
+    display: flex;
+    justify-content: space-between;
+}
+.contatos {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #5c5c5c;
+}
+.footer_contatos {
+    margin-right: 10px;
+}
+.footer_contatos {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #5c5c5c;
+}
+.redes_sociais img {
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+.redes_sociais a {
+    text-decoration: none;
+}
+.post1,
+.tweet1,
+.tweet2,
+.tweet3 {
+    color: #5c5c5c;
+    line-height: 20px;
+    font-size: 13px;
+}
+.widget_body span {
+    color: #0079c7;
+}
+
+.footercopy {
+    border-top: 1px solid #2c2c2c;
+    height: 40px;
+    line-height: 40px;
+    color: #5c5c5c;
+    font-size: 15px;
+    margin-top: 30px;
+}
+.footercopy strong {
+    color: #ffff;
+}
+
+.menuMobile {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+.mm_linha {
+    height: 3px;
+    background-color: #0079c7;
+    border-radius: 1px solid;
+}
+/* responsividade */
+@media (max-width:600px) {
+    .banner_headline {
+        padding: 20px;
+    }
+    .banner_headline h1 {
+        font-size: 55px;
+    }
+    .banner_headline h2 {
+        font-size: 15px;
+    }
+    .banner_options {
+        height: auto;
+        flex-direction: column;
+        margin-top: 80px;
+    }
+    .container {
+        flex-direction: column;
+    }
+    section {
+        margin-top: 80px;
+    }
+    #geral section,
+    #geral aside {
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .footermenu {
+        flex-direction: column;
+    }
+    .footerarea {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .footercopy {
+        padding-left: 20px;
+        height: auto;
+    }
+    header .container {
+        flex-direction: row;
+    }
+    nav ul {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background-color: #ffff;
+    }
+    header {
+        height: auto;
+    }
+    .logo {
+        padding-left: 20px;
+    }
+    .menuMobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
